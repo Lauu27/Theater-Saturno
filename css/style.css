@@ -1,1 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Nunito', sans-serif;
+  background-color: #ffffff;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ================= BANNER ================= */
+
+.banner {
+  position: relative;
+  height: 70vh;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.4 );
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  text-align: center;
+}
+
+.banner-text h1 {
+  font-size: 3.2rem;
+  font-weight: 900;
+  margin-bottom: 15px;
+}
+
+.banner-text p {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+.btn-banner {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: #d400ff;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.3s ease;
+}
+
+.btn-banner:hover {
+  transform: scale(1.05);
+}
+
+/* ================= MAIN ================= */
+
+main {
+  flex: 1;
+}
+
+/* ================= SECCIONES ================= */
+
+.shows-section {
+  width: 92%;
+  max-width: 1400px;
+  margin: 40px auto;
+}
+
+.shows-section > h2 {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+/* ================= DESTACADOS ================= */
+
+.shows-section.destacados {
+  text-align: center; 
+}
+
+.shows-section.destacados > h2 {
+  display: inline-block; 
+  padding-bottom: 8px;   
+  margin: 2px;             
+  font-size: 2rem; 
+  font-weight: 800;   
+  text-align: center;    
+}
+
+.shows-section.destacados > h2::after {
+  content: "";
+  display: block;
+  width: 6em;          
+  height: 4px;              
+  background-color: #6d1289; 
+  margin: 8px auto 0 auto; 
+  margin-bottom: 15px;
+  border-radius: 2px;
+}
+
+.shows-section.destacados::after {
+  content: "";
+  display: block;
+  width: 20em;          
+  height: 4px;               
+  background-color: #6d128924;  
+  margin: 40px auto 0 auto; 
+  margin-bottom: 3em;
+  border-radius: 2px;  
+}
+
+/* ================= SLIDER ================= */
+
+.slider-container {
+  position: relative;
+}
+
+.slider-track {
+  display: flex;
+  gap: 32px;
+  overflow-x: auto;
+  padding: 10px 5px;
+  scroll-behavior: smooth;
+}
+
+.slider-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* ================= CARD DESTACADA ================= */
+
+.destacado-card {
+  min-width: 420px;
+  max-width: 420px;
+  border-radius: 18px;
+  background-color: #fff;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.destacado-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 30px rgba(0,0,0,0.16);
+}
+
+/* IMAGEN MÁS BAJA */
+
+.destacado-card .show-img img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* TEXTO DESTACADO */
+
+.destacado-card .show-info {
+  padding: 20px;
+}
+
+.destacado-card h3 {
+  font-size: 1.55rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.destacado-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.45;
+}
+
+.destacado-card span {
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #6d1289;
+}
+
+/* ================= BOTONES SLIDER ================= */
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #6d1289;
+  color: #fff;
+  border: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.slider-btn.prev {
+  left: -18px;
+}
+
+.slider-btn.next {
+  right: -18px;
+}
+
+/* ================= PROXIMOS SHOWS ================= */
+
+.shows-section.proximos h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #333;
+}
+
+/* GRID 3 COLUMNAS */
+
+.shows-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+/* ================= CARD BASE ================= */
+
+.show-card {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.show-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 24px rgba(0,0,0,0.14);
+}
+
+.show-img img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.show-info {
+  padding: 22px;
+}
+
+.show-info h3 {
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.show-info p {
+  color: #555;
+  line-height: 1.5;
+}
+
+.show-info span {
+  display: inline-block;
+  margin-top: 12px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #a91bd4;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1024px) {
+  .shows-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .destacado-card {
+    min-width: 360px;
+  }
+}
+
+@media (max-width: 600px) {
+  .shows-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .destacado-card {
+    min-width: 300px;
+  }
+
+  .banner-text h1 {
+    font-size: 2.4rem;
+  }
+}
+
+/* ================= BOTÓN VER MÁS ================= */
+
+.shows-btn-container {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.btn-ver-mas {
+  display: inline-block;
+  padding: 14px 200px;
+  background-color: #6d1289;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 40px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-bottom: 2em;
+}
+
+.btn-ver-mas:hover {
+  background-color: #a91bd4;
+  transform: translateY(-3px);
+}
